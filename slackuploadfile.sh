@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 API_URL='https://slack.com/api/files.upload'
-SLACK_TOKEN=$(cat .config | grep Slack-Token | sed "s/SlackToken://")
-CHANNEL=$(cat .config | grep Slack-Channel | sed "s/SlackChannel://")
+SLACK_TOKEN=$(cat .config | grep SlackToken | sed "s/SlackToken://")
+CHANNEL=$(cat .config | grep SlackChannel | sed "s/SlackChannel://")
 FILENAME="$1"
 SHORT_FILENAME=$(basename ${FILENAME})
 
