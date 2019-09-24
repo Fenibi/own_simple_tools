@@ -388,7 +388,7 @@ def craft_cmd(url_and_options):
         
         if options.header:
             for header in options.header:
-                cmd_parameters.append('header="%s"' % header.replace('*',url).rstrip(';'))
+                cmd_parameters.append('header="%s"' % header.replace('*',url.split('//')[1].split(':')[0]).rstrip(';'))
     
     # Chrome and chromium renderers
     elif (options.renderer == 'chrome') or (options.renderer == 'chromium'): 
