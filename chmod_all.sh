@@ -1,1 +1,1 @@
-for file in $(ls); do chmod +x file; done 
+for file in $(ls); do chmod +x $file; done 
